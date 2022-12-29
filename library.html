@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <title>Document</title>
+</head>
+<body>
+    <!-- pop-up stuff -->
+    <div id="overlay"></div>
+    <div id="popup">
+        <div class="popupcontent">
+            <h1>Enter Book Info Below</h1>
+            <form class="book-input">
+                <div class="left-side">
+                    <label for="title">Title</label>
+                    <input type="text" id="title">
+                    <label for="author">Author</label>
+                    <input type="text" id="author">
+                </div>
+                <div class="right-side">
+                    <label for="pages">Pages</label>
+                    <input type="text" id="pages">
+                    <label for="read">Read</label>
+                    <input type="text" id="read">
+                </div>
+            </form>
+            <button class="submit-book">Submit Book</button>
+            <button class="close_button">Close</button>
+        </div>
+    </div>
+    <!-- main content -->
+    <div class="main-content">
+        <header class="header">
+            <h1>My Book Library</h1>
+        </header>
+        <button class="add-book">Add Book</button>
+        <table class="book-table" id="book-table">
+            <tr>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Pages</th>
+                <th>Read</th>
+            </tr>
+            <tr>
+                <td>Hobbit</td>
+                <td>Tolkein</td>
+                <td>1000</td>
+                <td>not read</td>
+            </tr>
+        </table>
+    </div>
+    <script src="/Users/pinaknayak/Documents/Github/Odin/Odin/exercises/objects.js"></script>
+</body>
+</html>
