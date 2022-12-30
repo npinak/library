@@ -23,7 +23,7 @@
                 <div class="right-side">
                     <label for="pages">Pages</label>
                     <input type="text" id="pages">
-                    <label for="read">Read</label>
+                    <label for="read">Read (yes/no)</label>
                     <input type="text" id="read">
                 </div>
             </form>
@@ -38,20 +38,24 @@
         </header>
         <button class="add-book">Add Book</button>
         <table class="book-table" id="book-table">
-            <tr>
-                <th>Title</th>
-                <th>Author</th>
-                <th>Pages</th>
-                <th>Read</th>
-            </tr>
-            <tr>
-                <td>Hobbit</td>
-                <td>Tolkein</td>
-                <td>1000</td>
-                <td>not read</td>
-            </tr>
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Author</th>
+                    <th>Pages</th>
+                    <th>Read</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Hobbit</td>
+                    <td>Tolkein</td>
+                    <td>1000</td>
+                    <td>not read</td>
+                </tr>
+            </tbody>
         </table>
     </div>
-    <script src="/Users/pinaknayak/Documents/Github/Odin/Odin/exercises/objects.js"></script>
+    <script src="/Users/pinaknayak/Documents/Github/library/objects.js"></script>
 </body>
 </html>

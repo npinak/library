@@ -12,6 +12,13 @@ function Book(title, author, pages, read) {
 // Array to store books 
 let myLibrary = [];
 
+// book ID counter
+let id = 0
+let book_id
+
+// Table variable 
+let table = document.getElementById('book-table');
+
 
 // Event listener variables
 const close_button = document.querySelectorAll('.close_button');
@@ -49,28 +56,44 @@ function pop_up_close(){
 
 
 function addBookToLibrary() {
-    // get info from the input pop-up
-    // create prototype from input
-    // store prototype in myLibrary
-    // arrange info from prototype in correct order
-    // add info to correct cell
+    // get info from the input fields (x)
+    // create prototype from input (x)
+    // store prototype in myLibrary (x)
+    // arrange info from prototype in correct order (x)
+    // add info to table in correct order
+        // get info for each field 
+        // create new row for table 
+        // add each field to correct column 
+    // clear input fields, have to clear when pressing close button as well
+    // make table cells small in the beginning 
 
-    var table = document.getElementById("book-table");
+    let title = document.getElementById('title').value
+    let author = document.getElementById('author').value
+    let pages = document.getElementById('pages').value
+    let read = document.getElementById('read').value
+
+    book_id = id
+    console.log(book_id)
     
-    // Create an empty <tr> element and add it to the 1st position of the table:
-    var row = table.insertRow(0);
+    book_id = new Book(title, author, pages, read)
+    
+    id = id + 1
 
-    // Insert new cells (<td> elements) at the 1st and 2nd position of the "new" <tr> element:
-    var cell1 = row.insertCell(0);
-    var cell2 = row.insertCell(1);
-
-    // Add some text to the new cells:
-    cell1.innerHTML = "NEW CELL1";
-    cell2.innerHTML = "NEW CELL2";
+    myLibrary.push(book_id)
 
     
+
+    
+
+    ////
+    // var row = table.insertRow(1)
+
+    // var cell1 = row.insertCell(0);
+    // var cell2 = row.insertCell(1);
+
+    // // Add some text to the new cells:
+    // cell1.innerHTML = "NEW CELL1";
+    // cell2.innerHTML = "NEW CELL2";
+    ////
+
 }
-
-// algorithm
-// Click button and a pop-up input appears
-// After clicking submit a new line is created in the table with info about book
