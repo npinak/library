@@ -17,14 +17,13 @@ let myLibrary = [];
 let id = 0
 let book_id
 
-// Table variable 
-let table = document.getElementById('book-table');
 
 // Event listener variables
 const close_button = document.querySelectorAll('.close_button');
 const add_book_button = document.querySelectorAll('.add-book');
 const submit_book_button = document.querySelectorAll('.submit-book');
 const read_status = document.querySelectorAll('.read-status');
+const delete_div = document.querySelectorAll('.delete');
 
 // Event listener for close button on pop-up
 submit_book_button.forEach(submit_book_button => {
@@ -45,6 +44,19 @@ add_book_button.forEach(add_book_button => {
 read_status.forEach(read_status => {
     read_status.addEventListener('click', change_read_status);
 });
+
+
+// delete row from table 
+var index, book_table = document.getElementById('book-table'); 
+for(var i = 0; i < book_table.rows.length; i++){
+    book_table.rows[i].cells[4].onclick = function()
+    {
+        index = this.parentElement.rowIndex;
+        book_table.deleteRow(index);
+        console.log(index);
+    }
+}
+
 
 // change read status when div is clicked
 function change_read_status() {
@@ -83,11 +95,10 @@ function addBookToLibrary() {
         // create new row for table (x)
         // add each field to correct column (x)
     // clear input fields, have to clear when pressing close button as well (x)
-    // make a delete button
-        // Create a blank table header
-        // Collapse table borders
     // make read cell togglable (x)
-    // make table cells small in the beginning
+    // make table cells small in the beginning (x)
+    // make a delete button
+    // style pop-up (x)
 
     const title = document.getElementById('title').value
     const author = document.getElementById('author').value
@@ -111,11 +122,24 @@ function addBookToLibrary() {
     const cell2 = row.insertCell(1);
     const cell3 = row.insertCell(2);
     const cell4 = row.insertCell(3);
+    const cell5 = row.insertCell(4);
     cell4.classList.add("read-status") // add class to read-status to change read status on click
+    cell5.classList.add("delete") // add class to read-status to change read status on click
     cell1.innerHTML = title;
     cell2.innerHTML = author;
     cell3.innerHTML = pages;
     cell4.innerHTML = read;
+    cell5.innerHTML = "Delete"
+
+    // delete row function 
+    var index, book_table = document.getElementById('book-table');
+    for (var i = 0; i < book_table.rows.length; i++) {
+        book_table.rows[i].cells[4].onclick = function () {
+            index = this.parentElement.rowIndex;
+            book_table.deleteRow(index);
+            console.log(index);
+        }
+    }
 
     // Clear input fields 
 
