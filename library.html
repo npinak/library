@@ -15,19 +15,27 @@
             <h1>Enter Book Info Below</h1>
             <form class="book-input">
                 <div class="left-side">
-                    <label for="title">Title</label>
-                    <input type="text" id="title">
-                    <label for="author">Author</label>
-                    <input type="text" id="author">
+                    <div class="title">
+                        <label for="title">Title</label>
+                        <input type="text" id="title">
+                    </div>
+                    <div class="author">
+                        <label for="author" id="author-label">Author</label>
+                        <input type="text" id="author">
+                    </div>
                 </div>
                 <div class="right-side">
-                    <label for="pages">Pages</label>
-                    <input type="text" id="pages">
-                    <label for="read">Read</label>
-                    <select name="read-status" id="read">
-                        <option value="read" selected="selected">read</option>
-                        <option value="not read">not read</option>
-                    </select>
+                    <div class="pages">
+                        <label for="pages">Pages</label>
+                        <input type="text" id="pages">
+                    </div>
+                    <div class="read-options">
+                        <label for="read-options-dropdown">Read</label>
+                        <select name="read-options-dropdown" id="read">
+                            <option value="read" selected="selected">read</option>
+                            <option value="not read">not read</option>
+                        </select>
+                    </div>
                 </div>
             </form>
             <div class="pop-up-buttons">

@@ -1,9 +1,3 @@
-/* Things to do:
-1. add transition animations for open and close 
-2. style buttons
-*/
-
-
 body {
     /* display: flex;
     background-color: orange;
@@ -39,6 +33,7 @@ table {
     width: 100%;
     border-collapse: collapse;
     height: 50px;
+    margin-top: 50px;
 }
 
 tr {
@@ -52,8 +47,8 @@ th{
 }
 
 td {
-    /* line-height: 50px; */
     border-collapse: collapse;
+    height:50px;
 }
 
 .delete:hover {
@@ -116,18 +111,24 @@ td {
 
 .right-side{
     width: 50%;
-    /* background-color: yellow; */
     float:right;
-    /* padding-left: 2%; */
-    /* figure out why float isn't working */
     margin-top: 10px;
 }
+
 
 .left-side{
     width:50%;
     float:left;
     padding-left: 2%;
     margin-top: 10px;
+}
+
+.author{
+    margin-top: 10px;;
+}
+
+.read-options{
+    margin-top:10px;
 }
 
 input, label {
@@ -240,6 +241,7 @@ input, label {
 .add-book {
     width: 30vw;
     height: 8vh;
+    margin-top: 20px;
 }
 
 .add-book {
@@ -275,4 +277,10 @@ input, label {
         min-width: 120px;
         padding: 0 25px;
     }
+}
+
+select {
+    width: 150px;
+    height: 30px;
+    line-height: 50px;
 }
