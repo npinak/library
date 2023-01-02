@@ -23,8 +23,11 @@
                 <div class="right-side">
                     <label for="pages">Pages</label>
                     <input type="text" id="pages">
-                    <label for="read">Read (yes/no)</label>
-                    <input type="text" id="read">
+                    <label for="read">Read</label>
+                    <select name="read-status" id="read">
+                        <option value="read" selected="selected">read</option>
+                        <option value="not read">not read</option>
+                    </select>
                 </div>
             </form>
             <button class="submit-book">Submit Book</button>
@@ -44,6 +47,7 @@
                     <th>Author</th>
                     <th>Pages</th>
                     <th>Read</th>
+                    <th>Delete</th>
                 </tr>
             </thead>
             <tbody>
@@ -51,7 +55,8 @@
                     <td>Hobbit</td>
                     <td>Tolkein</td>
                     <td>1000</td>
-                    <td>not read</td>
+                    <td class="read-status">not read</td>
+                    <td class="delete">Delete</td>
                 </tr>
             </tbody>
         </table>

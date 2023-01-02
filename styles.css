@@ -11,6 +11,7 @@ body {
     align-items: center;
     justify-content: center; */
     background-color: orange;
+    font-family: Arial;
 }
 
 .main-content{
@@ -18,7 +19,7 @@ body {
     background-color: orange;
     height: 100vh;
     grid-template-columns: 95vw;
-    grid-template-rows: 20vh 10vh 70vh;
+    grid-template-rows: 10vh 10vh 70vh;
     justify-items: center;
     justify-content: center;
 
@@ -36,31 +37,31 @@ body {
     height: 8vh;
 }
 
-/* .book-table{
-    display:flex;
-    width:100%;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    text-align: center;
-} */
+/* Table */
 
 table {
-    border: 1px solid;
-    table-layout: fixed;
-    width: 100%
-}
-
-table th{
-    border: 1px solid;
+    /* table-layout: fixed; */
     width: 100%;
-    background-color: lightcyan;
+    border-collapse: collapse;
+    height: 100px;
 }
 
-table td{
-    border: 1px solid;
-    width: 100%
+tr {
+    border-bottom: 1pt solid black;
 }
+
+th{
+    text-align: left;
+    background-color: lightcyan;
+    border-collapse: collapse;
+}
+
+td {
+    /* line-height: 50px; */
+    border-collapse: collapse;
+}
+
+/* Table */
 
 /* pop up stuff */
 
