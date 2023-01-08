@@ -97,7 +97,7 @@ function addBookToLibrary() {
     // clear input fields, have to clear when pressing close button as well (x)
     // make read cell togglable (x)
     // make table cells small in the beginning (x)
-    // make a delete button
+    // make a delete button(x)
     // style pop-up (x)
 
     const title = document.getElementById('title').value
